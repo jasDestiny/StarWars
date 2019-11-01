@@ -1,0 +1,405 @@
+<html>
+	<head>
+	<script>
+	function showQuiz()
+	{
+		document.getElementById("newdiv").style.display="block";
+		document.getElementById("newdiv1").style.display="none";
+		document.getElementById("newdiv2").style.display="none";
+		
+	}
+	function showStory()
+	{
+		document.getElementById("newdiv1").style.display="block";
+		document.getElementById("newdiv2").style.display="none";
+		document.getElementById("newdiv").style.display="none";
+	}
+	function showAward()
+	{
+		document.getElementById("newdiv1").style.display="none";
+		document.getElementById("newdiv2").style.display="block";
+		document.getElementById("newdiv").style.display="none";
+	}
+	</script>
+	<style>
+	#ccj
+	{
+	 width:100%;
+	 
+	}
+	footer
+	{
+		color:white;
+		font-family:georgian;
+		font-size:140%;
+		background-color:black;
+	}
+	li{
+	padding:2px;
+	size:150%;
+	}
+	#newdiv
+	{
+		display:none;
+	}
+	.navbar {
+	  overflow: hidden;
+	  background-color: #333;
+	  position: sticky;
+	  position: -webkit-sticky;
+	  top: 0;
+	}
+
+
+	.navbar a {
+	  float: left;
+	  display: block;
+	  color: white;
+	  text-align: center;
+	  padding: 14px 20px;
+	  text-decoration: none;
+	}
+
+
+
+	.navbar a.right {
+	  float: right;
+	}
+
+
+	.navbar a:hover {
+	  background-color: #ddd;
+	  color: black;
+	}
+
+
+	.navbar a.active {
+	  background-color: #666;
+	  color: white;
+	}
+
+	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script>
+		function verify()
+		{
+			var answer1=document.getElementById("rightAnswer1").checked;
+			var answer2=document.getElementById("rightAnswer2").checked;
+			var answer3=document.getElementById("rightAnswer3").checked;
+			var answer4=document.getElementById("rightAnswer4").checked;
+			var answer5=document.getElementById("rightAnswer5").checked;
+			var marks=0;
+			if(answer1==true)
+			{
+				marks++;
+				document.getElementById("dummy1").style.color="green";
+			}
+			if(answer2==true)
+			{
+				marks++;
+				document.getElementById("dummy2").style.color="green";
+			}
+			if(answer3==true)
+			{
+				marks++;
+				document.getElementById("dummy3").style.color="green";
+			}
+			if(answer4==true)
+			{
+				marks++;
+				document.getElementById("dummy4").style.color="green";
+			}
+			if(answer5==true)
+			{
+				marks++;
+				document.getElementById("dummy5").style.color="green";
+			}
+			
+			if(marks==5)
+			{
+				document.getElementById("Results").innerHTML="You got all the questions right, you are a true Jedi-knight";
+			}
+			if(marks==4)
+			{
+				document.getElementById("Results").innerHTML="Howdy Lieutenant!!";
+			}
+			if(marks==3)
+			{
+				document.getElementById("Results").innerHTML="I see, so you must be new to this place";
+			}
+			if(marks==2)
+			{
+				document.getElementById("Results").innerHTML="Enemy spotted";
+			}
+			if(marks==1)
+			{
+				document.getElementById("Results").innerHTML="Here's a sith lord";
+			}
+			if(marks==0)
+			{
+				document.getElementById("Results").innerHTML="Perfect! you got none right. You must be a stormtrooper";
+			}
+			
+			
+			
+		}
+		
+		
+	</script>
+	<style>
+	h1
+	{
+		color:black;
+	}
+	.Question
+		{
+			color:purple;
+		}
+		
+		.answerOptions
+		{
+			color:blue;
+		}
+	#Results
+		{
+			padding:40px;
+			background-color:white;
+			color:green;
+		}
+	body
+	{
+		background-color:black;
+	}
+	.main
+	{
+		
+		height: 60%;
+		margin: 0;
+		background-image: url("samplepic.png"); 
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	
+	.content
+	{
+		padding: 250px 500px 500px 500px;
+	}
+	.button
+	{
+	background-color: #0000ff; /* Green */
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	}
+	#questions
+	{
+		background-color:white;
+		margin: 20px 20px 20px 20px;
+	}
+	h2
+	{
+		color:purple;
+	}
+	#newdiv1
+	{
+		margin:15px;
+		display:none;
+	}
+	#newdiv2
+	{
+		display:none;
+		margin:15px;
+	}
+	#testText {
+	
+	font-size:50px;
+	font-family:Courier;
+	text-shadow: 1px 0 0 #000, -2px 0 0 #ed89d2, 0 2px 0 #ab2099, 0 -2px 0 #fff, 1px 1px #000, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+	color:white;
+}
+#testText2
+{
+	font-family:Comic Sans MS ;
+	font-size:50px;
+	text-shadow: 1px 0 0 #000000, -2px 0 0 #ed89d2, 0 2px 0 #ab2099, 0 -2px 0 #fff, 1px 1px #000, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+ }
+	</style>
+	</head>
+	<body>
+		
+		<div class="main">
+		<br>
+		<br>
+		<br>
+		<br>
+		<h1 id="testText">Welcome to the official website of Star wars </h1>
+	
+		</div>
+		<div>
+		<div id="questions">
+		
+		<div class="navbar">
+  <a href="#" class="active" onclick="showQuiz()">Attend a star wars quiz</a>
+  <a href="#" class="active" onclick="showStory()">More star wars stories</a>
+  <a href="#" class="active" onclick="showAward()">Cast Awards and Accolodes</a>
+  <a href="new.html" class="right">Previous page</a>
+</div>
+		<div id="newdiv">
+		<div>
+			<p><h1 class="Question">1. Which of the following does not perfectly describe <b>Yoda</b>?</h1></p>
+		</div>
+		<div class="answerOptions">
+			<form>
+				<input type="radio" name="1" class="option" id="rightAnswer1"><span id="dummy1"> Son of Piccolo</span><br>
+				<input type="radio" name="1" class="option">Little green<br>
+				<input type="radio" name="1" class="option">Ancient one<br>
+				<input type="radio" name="1" class="option">A bit brash<br>
+			</form>
+		</div>
+		
+		
+		
+		<div>
+			<p><h1 class="Question">2. Who is the only <b>star wars character with a purple lightsaber</b>?</h1></p>
+		</div>
+		<div class="answerOptions">
+			<form>
+				<input type="radio" name="1" class="option">Rey<br>
+				<input type="radio" name="1" class="option" id="rightAnswer2"><span id="dummy2">Mace Windu</span><br>
+				<input type="radio" name="1" class="option">Hans Solo<br>
+				<input type="radio" name="1" class="option">Jar Jar Binks<br>
+			</form>
+		</div>
+		
+		<div>
+			<p><h1 class="Question">3. What species is <b>Chewbacca</b>?</h1></p>
+		</div>
+		<div class="answerOptions">
+			<form>
+				<input type="radio" name="1" class="option">Chihuahua <br>
+				<input type="radio" name="1" class="option" >Hutt<br>
+				<input type="radio" name="1" class="option" id="rightAnswer3"><span id="dummy3">Wookie</span><br>
+				<input type="radio" name="1" class="option">Talz<br>
+			</form>
+		</div>
+		
+		<div>
+			<p><h1 class="Question">4. Who originally played <b>Hans Solo</b>?</h1></p>
+		</div>
+		<div class="answerOptions">
+			<form>
+				<input type="radio" name="1" class="option" id="rightAnswer4"><span id="dummy4">Harrison Ford</span><br>
+				<input type="radio" name="1" class="option" >Aston Martin<br>
+				<input type="radio" name="1" class="option" >Enzo Ferrari<br>
+				<input type="radio" name="1" class="option">Ferruccio Lamborghini<br>	
+			</form>
+		</div>
+		
+		<div>
+			<p><h1 class="Question">5. Which of these movies is the one where Luke finds out that <b> Darth Vader is his father</b>?</h1></p>
+		</div>
+		<div class="answerOptions">
+			<form>
+				<input type="radio" name="1" class="option">The last jedi<br>
+				<input type="radio" name="1" class="option" >Clone wars<br>
+				<input type="radio" name="1" class="option" >The revenge of the sith<br>
+				<input type="radio" name="1" class="option" id="rightAnswer5"><span id="dummy5">The empire strikes back</span><br>	
+			</form>
+		</div>
+	
+		
+		<div align="center">
+		<form>
+		<input type="button" class="button" value="Submit" onclick="verify()"> &nbsp; &nbsp;<input class="button" type="button" value="Retake the quiz" onclick="window.location.href='sample.html'">
+		</form>
+		<div align="center">
+		
+		<br>
+		<div>
+			<h2 id="Results"></h2>
+		</div>
+		
+		</div>
+		</div>
+		</div>
+		<div id="newdiv1">
+		<h1>'Episode 1: The Phantom Menace'</h1>
+		<p>The seeds for the eventual rise of the evil Empire are sown in a seemingly routine place: a trade dispute between the Republic and the Trade Federation. Two Jedi, the keepers of peace and justice, are dispatched to negotiate the dispute, but (wait for it) it's a trap! They end up barely escaping with their lives, though they do meet R2-D2, who saves their lives. They end up on remote Tatooine, where they meet slave boy Anakin Skywalker and his protocol droid C3PO. Jedi Qui-Gon Jinn senses the Force in Anakin - and believes he's the "Chosen One" who will bring balance to the Force. There's a podrace and Anakin is freed. Qui-Gon wants to train Anakin, but the Jedi Council knows something is up with this boy and rejects it. But he helps the Republic win a battle against the Trade Federation so the Council lets Obi-Wan Kenobi take him as his apprentice</p>
+		<h1>'Episode 2: Attack of the Clones'</h1>
+		<img src="1.jpg">
+		<p>Anakin is older now, but just as bad an actor. The weird trade dispute has grown to a full-scale revolt against the Republic. Anakin is assigned to protect Republic loyalist Sen. Padme Amidala, and they fall in love. Meanwhile, Obi-Wan discovers that a Jedi master has ordered the creation of an army of clones based on a single bounty hunter, Jango Fett, whom Obi-Wan determines is the assassin trying to kill Padme - though he does not know why. He also has no idea why the Jedi have ordered up a clone army. Meanwhile, Anakin's mom is murdered and he freaks out, channeling the dark side that everyone knows he has in him. The full-scale revolt against the Republic is being led by Count Dooku, a former Jedi, who has built his own droid army. Under pressure, the Galactic Senate votes the Chancellor emergency powers, which (wait for it!) is also a trap! The two armies battle and the Jedi and the Clones barely win. The movie ends with the revelation that Dooku, the revolt, the clones and the droids are all being controlled by an evil Sith Lord - who is actually the Chancellor!</p>
+		<h1>'Episode 3: Revenge of the Sith'</h1>
+		<img src="2.jpg">
+		<p>The Chancellor has been captured by a revolt leader General Grievous, but Obi-Wan and Anakin rescue him heroically. The Chancellor, seeking to draw out Anakin's dark side, demands that Anakin assassinate Dooku, which he does. Anakin is dealing with his demons, including visions of Padme dying in childbirth. The Council declines to elevate him to Master status, so the Chancellor puts him on the Jedi Council as his representative (spy). He also brags to Anakin that he knows how to harness the dark side to cheat death — though you can't learn that from any (dismissively) Jedi. But (wait for it!), it's a trap. Anakin eventually figures out that the Chancellor is a Sith Lord, but when the Jedi try to arrest him, Anakin comes to his aid because he still wants to save Padme from the visions of death. The Chancellor makes Anakin his apprentice and dubs him Darth Vader. He also orders him to kill everyone, including younglings, though a few Jedi, including Yoda, escape. Obi-Wan tries to stop him with an epic lightsaber battle on the molten planet Mustafar, leaving Anakin next to a lava river as little more than a burnt up torso. The Chancellor saves him, puts him in Darth Vader's famous black suit and they start the Death Star. Padme dies in childbirth and her twins, Luke and Leia are separated and hidden from the now-Empire, with Leia going to Alderaan and Luke ending up on Tatooine, with Obi-Wan going into exile there to watch over the boy.</p>
+		<br><br>
+		</div>
+		
+		<div id="newdiv2">
+		
+		<h1>Cast and crew</h1>
+		
+		
+		<ul>
+		<li>Carrie Fisher as Princess Leah</li>
+		<li>Mark Hamill as Luke Skywalker</li>
+		<li>Harrison Ford as Hans Solo</li>
+		<li>Alec Guiness as Obi-wan-kenobi</li>
+		<li>James Earl James as Darth Vader</li>
+		<li>Frank Oz as Yoda</li>
+		<li>Samuel L Jackson as Mace Windu</li>
+		<li>Hayden Christensen as Anakin Skywalker</li>
+		<li>Natalie Portman as Padme</li>
+		<li>Daisy Ridley as Rey</li>
+		<li>John Boyega as Finn</li>
+		<li>Adam Driver as Kylo Ren</li>
+		<li>Anthony Daniels as C-3PO</li>
+		<li>Juuna Sootamo as Chewbacca</li>
+		<li>Kenny Baker as R2D2</li>
+		<li>Ian McDiamird as the Emperor</li>
+		</ul>
+		<br>
+		<h1>Awards</h1>
+		
+		<ul>
+		<li>Best Art Direction-Set Decoration:
+John Barry
+Norman Reynolds
+Leslie Dilley
+Roger Christian</li>
+		<li>Best Costume Design:
+John Mollo</li>
+		<li>Best Sound
+Don MacDougall
+Ray West
+Bob Minkler
+Derek Ball</li>
+		<li>Best Film Editing:
+Paul Hirsch
+Marcia Lucas
+Richard Chew</li>
+		<li>Best Effects, Visual Effects:
+John Stears
+John Dykstra
+Richard Edlund
+Grant McCune
+Robert Blalack</li>
+	<li>Best Music, Original Score
+John Williams</li>
+		<ul>
+		</div>
+		
+		
+<footer align="center">
+<img src="3.jpg" id="ccj">
+  <p>Made by : John Arthur Samuel D</p>
+  <p>Contact information: <a href="mailto:someone@example.com">
+  jasboson@gmail.com</a>.</p>
+</footer>
+	</body>
+	
+</html>
